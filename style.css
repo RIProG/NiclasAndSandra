@@ -3,21 +3,76 @@
     src: url(Alcubierre.ttf);
 }
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+#container {
+	min-height: 100%;
+}
+
+#main {
+	overflow: auto;
+	padding-bottom: 65px;
+}
+
+#footer {
+	background-color: white;
+	position: relative;
+	height: 65px;
+	margin-top: -65px;
+	clear: both;
+}
+
+table{
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table td a{
+	padding: 10px;
+	color: black;
+}
+.nav{
+	height: 70px;
+	line-height: 70px;
+}
+
+label{
+	margin: 0 40px 0 0;
+	font-size: 25px;
+	line-height: 70px;
+	display: none;
+	width: 25px;
+	float: left;
+}
+
+#toggle{
+	display: none;
+}
+
 #primary_nav_wrap
 {
-    margin-top:15px;
-    position: fixed;
-    top: 0; 
-    width: 100%; 
+	margin: 0 30px 0 0;
+	padding: 10px;
+
+    /* position: fixed; */
 }
 
 #primary_nav_wrap ul
 {
+	
 	list-style:none;
-	position:relative;
-	float:left;
+	position: relative;
 	margin:0;
-	padding:0
+	padding:0 
 }
 
 #primary_nav_wrap ul a
@@ -27,8 +82,8 @@
 	text-decoration:none;
 	font-weight:700;
 	font-size:25px;
-	line-height:32px;
-	padding:0 15px;
+	line-height:70px;
+	padding: 0 15px;
 	font-family: "Alcubierre";
 }
 
@@ -71,4 +126,26 @@
 {
     color: gray;
 	display: block;
+}
+
+@media only screen and (max-width: 650px) {
+	label{
+		display: block;
+		cursor: pointer;
+	}
+
+	#primary_nav_wrap{
+		text-align: center;
+		width: 100%;
+		display: none;
+	}
+
+	#primary_nav_wrap a{
+		display: block;
+		margin: 0;
+	}
+
+	#toggle:checked + #primary_nav_wrap{
+		display:block;
+	}
 }
